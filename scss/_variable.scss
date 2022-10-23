@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+$mainBodyBg:rgba(29, 33, 35, 1);
+$white:rgba(255, 255, 255, 1);
+$yellow:rgba(250, 205, 102, 1);
+$lightyellow:rgba(250, 205, 102, .5);
+$teal:rgba(96, 158, 175, 1);
+$tealAccent:rgba(164, 199, 198, 1);
+$accentWhite:rgba(255, 255, 255, 0.5);
+$darkAlt:rgba(26, 30, 31, 1);
+$accentAlt:rgba(51, 55, 59, .8);
+$menu:rgba(239, 238, 224, 0.25);
+$mobile:420px;
+
+@mixin flex($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexNormal ($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin mobile {
+    @media (max-width:$mobile) {
+        @content
+    }  
+}

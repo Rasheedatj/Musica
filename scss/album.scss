@@ -1,0 +1,279 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+html{
+    font-size: 60.25%;
+}
+body{
+
+    font-family: 'Quicksand';
+    scroll-behavior: smooth;
+    background-image: url(../../dist/img/Lead-imagetunes.svg), linear-gradient(to bottom,rgba(38, 40, 41, 0.9),rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    // background-color:rgba(29, 33, 35, .9);
+    background-blend-mode: overlay;   
+}
+
+::-webkit-scrollbar{
+    width: 2em
+}
+::-webkit-scrollbar-track{
+    background-color: $darkAlt;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(120, 169, 183);
+    border-radius: 5rem
+}
+
+header{
+    @include flex(row);
+    padding: 3rem 5.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .image{
+       width: 8%;
+    }
+    .search{
+        width: 90%;
+        background-color: $darkAlt;
+        padding: 1.5rem 2rem;
+        border-radius: 20px;
+        margin-left: 2rem;
+
+        input{
+            border: none;
+            outline: none;
+            font-size: 2rem;
+            margin-left: 3rem;
+            background-color: transparent;
+            width: 80%;
+            color: $white;
+        }
+        i{
+            font-size: 24px;
+            color: $accentWhite;
+        }
+    }
+}
+
+
+
+    .side-menu{
+        @include flex(column);
+        gap: 6rem;
+        justify-content: start;
+        align-items: flex-start;
+        position: fixed;
+        left: 3%;
+        top: 20%;
+
+        .part-1{
+           @include flex(column);
+           gap: 3rem;
+           background-color: $darkAlt;
+           padding:1rem .8rem ;
+           border-radius: 25px;
+        }
+        .part-2{
+            @include flex(column);
+            gap: 3rem; 
+            padding-left: 1rem;
+            background-color: $darkAlt;
+            padding:2rem 1.5rem ;
+            border-radius: 25px;
+        }
+    }
+    .active.collection{
+        background-color: $yellow;
+    }
+
+    .hero{
+        padding-left: 19.5rem;
+        padding-top: 14rem;
+        padding-right: 10rem;
+        padding-bottom: 5rem;
+        @include flexNormal(row);
+        align-items: center;
+        gap: 5rem;
+        color: white;
+        width: 100%;
+        .box1{
+            flex: 1;
+        }
+    .box2{
+        flex: 3;
+        & > p{
+            color: $white;
+            font-size: 1.7rem;
+            line-height: 25px;
+            font-weight: 400;
+            width: 60%;
+            padding-block: 2.5rem;
+        }
+
+        h1{
+            color: $tealAccent;
+            text-transform: capitalize;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 42px;
+            padding-bottom: 1rem;
+        }
+        
+        .btns{
+            @include flexNormal(row);
+            gap: 3rem;
+            align-items: center;
+            .btn-1{
+                padding-block: 1.4rem;
+            }
+
+            button{
+                @include flexNormal(row);
+                gap: 1.5rem;
+                align-items: center;
+                text-transform: capitalize;
+                background-color: $accentAlt;
+                padding: 1.5rem;
+                border: none;
+                color: $accentWhite;
+                border-radius: 25px;
+                font-size: 1.8rem;
+                cursor: pointer;
+
+               
+
+                i{
+                    font-size: 14px;
+                    color: black;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    background-color: $yellow;
+                }
+                
+            }
+
+            .img{
+                height: 4rem;
+                width: 4rem;
+                background-color: $accentAlt;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+    }
+
+    .playlist{
+        padding-left: 19.5rem;
+        padding-top: 3rem;
+        padding-right: 10rem;
+        padding-bottom: 12rem;
+        @include flexNormal(column);
+        gap: 2rem;
+
+        .song{
+            @include flexNormal (row);
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            background-color: $accentAlt;
+            padding: 0rem 2rem;
+            border-radius: 20px;
+
+            .box1{
+                @include flexNormal(row);
+                align-items: center;
+                gap: 5rem;
+            }
+
+            p{
+                color: $white;
+                font-size: 1.2rem;
+                line-height: 25px;
+                font-weight: 400;
+                padding-block: 2.5rem;
+                text-transform: capitalize;
+                text-align: left;
+            }
+        }
+    }
+
+
+
+    .widget{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        @include flexNormal(row);
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, .2);
+    
+    
+        .song{
+            @include flexNormal(row);
+            gap: 1.5rem;
+            align-self: flex-end;
+    
+            h4{
+                color: $white;
+                font-weight: 400;
+                font-size: 1.5rem;
+                margin-bottom: .9rem;
+            }
+            p{
+                color: $accentWhite;
+                font-size: 1.2rem;
+                
+            }
+        }
+    
+        .icons_and_playing{
+            @include flexNormal(column);
+            align-items: center;
+            gap: 2rem;
+    
+            .icons{
+                @include flexNormal(row);
+                gap: 4rem;
+    
+                img{
+                    width: 2.5rem;
+                }
+                .play-all{
+                    width: 4.5rem;
+                }
+            }
+        }
+        .volume{
+            @include flexNormal(row);
+            align-items: center;
+            gap: 2rem;
+        }
+        .volume-line{
+            position: absolute;
+            content: '';
+            width: 8rem;
+            height: 2px;
+            background-color: $yellow;
+            right: 9%;
+        }
+        
+    }
+    
+    

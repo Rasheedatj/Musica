@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 60.25%;
+}
+
+body {
+  background-color: rgb(29, 33, 35);
+  font-family: "Quicksand";
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 2em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(26, 30, 31);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 169, 183);
+  border-radius: 5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 3rem 5.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(29, 33, 35);
+  z-index: 10000;
+}
+@media (max-width: 420px) {
+  header {
+    gap: 3rem;
+    padding: 3rem;
+  }
+}
+header .image {
+  width: 8%;
+}
+header .search {
+  width: 90%;
+  background-color: rgb(26, 30, 31);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  margin-left: 2rem;
+}
+@media (max-width: 420px) {
+  header .search {
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-direction: row-reverse;
+  }
+}
+header .search input {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin-left: 3rem;
+  background-color: transparent;
+  width: 80%;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 420px) {
+  header .search input {
+    margin-left: 0;
+  }
+}
+@media (max-width: 420px) {
+  header .search ::-moz-placeholder {
+    color: rgb(29, 33, 35);
+  }
+  header .search :-ms-input-placeholder {
+    color: rgb(29, 33, 35);
+  }
+  header .search ::placeholder {
+    color: rgb(29, 33, 35);
+  }
+}
+header .search i {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+header .ham-menu {
+  display: none;
+}
+@media (max-width: 420px) {
+  header .ham-menu {
+    display: block;
+  }
+}
+header .ham-menu > div {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  margin-block: 1rem;
+}
+
+.side-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6rem;
+  justify-content: start;
+  align-items: flex-start;
+  position: fixed;
+  left: 3%;
+  top: 20%;
+}
+@media (max-width: 420px) {
+  .side-menu {
+    display: none;
+  }
+}
+.side-menu .part-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.3rem;
+  background-color: rgb(26, 30, 31);
+  padding: 2rem 1.6rem;
+  border-radius: 25px;
+}
+.side-menu .part-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 1rem;
+  background-color: rgb(26, 30, 31);
+  padding: 2rem 1.5rem;
+  border-radius: 25px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  padding-left: 19.5rem;
+  padding-top: 15rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+  gap: 5rem;
+}
+@media (max-width: 420px) {
+  .btns {
+    padding-inline: 3.5rem;
+  }
+}
+.btns button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btns .btn-1 {
+  background-color: rgb(250, 205, 102);
+  padding: 1.5rem 2rem;
+  border-radius: 25px;
+  border: 1px solid rgb(250, 205, 102);
+}
+.btns .btn-1:hover {
+  background-color: transparent;
+  border: 1px solid rgb(239, 238, 224);
+  color: rgba(255, 255, 255, 0.5);
+}
+.btns .btn-2 {
+  background-color: transparent;
+  border: 1px solid rgb(239, 238, 224);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0rem 3.5rem;
+  border-radius: 27px;
+}
+.btns .btn-2:hover {
+  background-color: rgb(250, 205, 102);
+  color: black;
+}
+
+.collection {
+  padding-left: 19.5rem;
+  padding-top: 3rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+@media (max-width: 420px) {
+  .collection {
+    padding-inline: 3.5rem;
+    flex-direction: column;
+  }
+}
+.collection .box {
+  padding: 2rem 1.5rem;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  position: relative;
+}
+@media (max-width: 420px) {
+  .collection .box {
+    width: 100%;
+  }
+}
+.collection .box .visible {
+  position: absolute;
+  bottom: 2rem;
+  z-index: 100;
+  transition: transform 500ms ease;
+}
+@media (max-width: 420px) {
+  .collection .box .visible {
+    transform: translateY(-2.5rem);
+    margin-bottom: 2rem;
+  }
+}
+.collection .box .visible h4 {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.collection .box .visible p, .collection .box .visible .menu > div a, .menu > div .collection .box .visible a {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+  font-weight: 500;
+}
+.collection .box .hidden {
+  position: absolute;
+  bottom: 0;
+  transition: transform 500ms ease;
+  transition-delay: 0.05s;
+}
+@media (max-width: 420px) {
+  .collection .box .hidden {
+    bottom: 0.5rem;
+    transform: translateY(-4rem);
+  }
+}
+.collection .box .hidden p, .collection .box .hidden .menu > div a, .menu > div .collection .box .hidden a {
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+  font-weight: 500;
+  transform: translateY(100%);
+}
+.collection .box::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04b";
+  color: yellow;
+  font-size: 25px;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: rgba(250, 205, 102, 0.5);
+  display: none;
+  place-items: center;
+  right: 5%;
+  bottom: 10%;
+  z-index: 100;
+  transition: all 200ms ease;
+  -webkit-animation: slideUp 500ms ease;
+          animation: slideUp 500ms ease;
+}
+@media (max-width: 420px) {
+  .collection .box::before {
+    display: grid;
+  }
+}
+.collection .box:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 420px) {
+  .collection .box:hover {
+    transform: scale(1);
+  }
+}
+.collection .one {
+  background: url(../../dist/img/limit-1.png) center center/cover;
+  border-radius: 25px;
+}
+.collection .two {
+  background: url(../../dist/img/limit-2.png) center center/cover;
+  border-radius: 25px;
+}
+.collection .three {
+  background: url(../../dist/img/limit-3.png) center center/cover;
+  border-radius: 25px;
+}
+.collection .four {
+  background: url(../../dist/img/limit-4.png) center center/cover;
+  border-radius: 25px;
+}
+
+.box:hover .visible {
+  transform: translateY(-2.5rem);
+}
+
+.box:hover .hidden {
+  transform: translateY(-4rem);
+}
+
+.box:hover.box::before {
+  display: grid;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.menu {
+  position: fixed;
+  background-color: rgb(29, 33, 35);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem;
+  padding-top: 10rem;
+  z-index: 100000;
+  display: none;
+}
+.menu .home {
+  margin-left: -1.2rem;
+}
+.menu .home p, .menu > div .home a {
+  color: white;
+  margin-left: -1rem;
+}
+.menu > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+.menu > div P {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: rgba(239, 238, 224, 0.25);
+}
+.menu > div a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: rgba(239, 238, 224, 0.25);
+}
+.menu .close-btn {
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+}
+.menu .close-btn i {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.active.menu {
+  display: flex;
+}/*# sourceMappingURL=collection.css.map */
