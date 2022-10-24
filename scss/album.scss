@@ -3,18 +3,25 @@
 
 html{
     font-size: 60.25%;
+
+    @include mobile{
+        font-size: 50%;
+    }
 }
 body{
 
     font-family: 'Quicksand';
     scroll-behavior: smooth;
-    background-image: url(../../dist/img/Lead-imagetunes.svg), linear-gradient(to bottom,rgba(38, 40, 41, 0.9),rgb(0, 0, 0));
+    background-image: url(../../dist/img/Lead-imagetunes.svg), linear-gradient(to bottom,rgba(38, 40, 41, .8),rgb(5,5,5));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    // background-color:rgba(29, 33, 35, .9);
-    background-blend-mode: overlay;   
+    background-blend-mode: overlay; 
+    
+    @include mobile {
+        background-image: url();
+    }
 }
 
 ::-webkit-scrollbar{
@@ -36,6 +43,12 @@ header{
     width: 100%;
     z-index: 100;
 
+       // mobile code
+       @include mobile{
+        gap: 3rem;
+        padding: 3rem;
+    }
+
     .image{
        width: 8%;
     }
@@ -45,6 +58,15 @@ header{
         padding: 1.5rem 2rem;
         border-radius: 20px;
         margin-left: 2rem;
+
+            // mobile code
+            @include mobile{
+                padding: 1rem 2rem;
+                display: flex;
+                gap: 3rem;
+                flex-direction: row-reverse;
+                
+            }
 
         input{
             border: none;
@@ -73,6 +95,10 @@ header{
         left: 3%;
         top: 20%;
 
+           // mobie code
+           @include mobile{
+            display: none;
+        }
         .part-1{
            @include flex(column);
            gap: 3rem;
@@ -103,6 +129,15 @@ header{
         gap: 5rem;
         color: white;
         width: 100%;
+
+        // mobile code
+        @include mobile{
+            padding-inline: 3.5rem;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
         .box1{
             flex: 1;
         }
@@ -115,6 +150,10 @@ header{
             font-weight: 400;
             width: 60%;
             padding-block: 2.5rem;
+
+            @include mobile{
+                width: 100%;
+            }
         }
 
         h1{
@@ -130,6 +169,10 @@ header{
             @include flexNormal(row);
             gap: 3rem;
             align-items: center;
+
+            @include mobile{
+                gap: 2rem;
+            }
             .btn-1{
                 padding-block: 1.4rem;
             }
@@ -182,6 +225,11 @@ header{
         @include flexNormal(column);
         gap: 2rem;
 
+        // mobile code
+        @include mobile{
+            padding-inline: 3.5rem
+        }
+
         .song{
             @include flexNormal (row);
             align-items: center;
@@ -195,6 +243,29 @@ header{
                 @include flexNormal(row);
                 align-items: center;
                 gap: 5rem;
+
+                @include mobile{
+                    gap: 1.5rem;
+                }
+
+                .like{
+                    @include mobile{
+                        display: none
+                    }
+                }
+            }
+            .box2{
+                @include flexNormal(row);
+                align-items: center;
+                gap: 10rem;
+
+                @include mobile{
+                    flex-direction: column;
+                    gap: 0;
+                    align-items: start;
+                    
+                }
+               
             }
 
             p{
@@ -205,6 +276,10 @@ header{
                 padding-block: 2.5rem;
                 text-transform: capitalize;
                 text-align: left;
+
+                @include mobile{
+                    padding-block: 0rem;
+                }
             }
         }
     }
@@ -223,12 +298,22 @@ header{
         z-index: 1000;
         backdrop-filter: blur(10px);
         border-top: 1px solid rgba(255, 255, 255, .2);
+
+          // mobile code
+            @include mobile{
+                padding:2rem
+            }
     
     
         .song{
             @include flexNormal(row);
             gap: 1.5rem;
             align-self: flex-end;
+
+             // mobile code
+        @include mobile{
+            align-items: center;
+        }
     
             h4{
                 color: $white;
@@ -247,6 +332,11 @@ header{
             @include flexNormal(column);
             align-items: center;
             gap: 2rem;
+
+             // mobile code
+        @include mobile{
+            display: none
+        }
     
             .icons{
                 @include flexNormal(row);
@@ -264,6 +354,11 @@ header{
             @include flexNormal(row);
             align-items: center;
             gap: 2rem;
+
+              // mobile code
+         @include mobile{
+            display: none
+        }
         }
         .volume-line{
             position: absolute;
@@ -272,6 +367,21 @@ header{
             height: 2px;
             background-color: $yellow;
             right: 9%;
+        }
+
+        .hidden{
+            display: none;
+    
+            img{
+                width: 35px;
+            }
+           
+            @include mobile{
+                display: flex;
+                gap: 2rem;
+            }
+    
+           
         }
         
     }

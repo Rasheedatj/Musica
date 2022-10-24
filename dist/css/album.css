@@ -9,16 +9,26 @@
 html {
   font-size: 60.25%;
 }
+@media (max-width: 420px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Quicksand";
   scroll-behavior: smooth;
-  background-image: url(../../dist/img/Lead-imagetunes.svg), linear-gradient(to bottom, rgba(38, 40, 41, 0.9), rgb(0, 0, 0));
+  background-image: url(../../dist/img/Lead-imagetunes.svg), linear-gradient(to bottom, rgba(38, 40, 41, 0.8), rgb(5, 5, 5));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   background-blend-mode: overlay;
+}
+@media (max-width: 420px) {
+  body {
+    background-image: url();
+  }
 }
 
 ::-webkit-scrollbar {
@@ -45,6 +55,12 @@ header {
   width: 100%;
   z-index: 100;
 }
+@media (max-width: 420px) {
+  header {
+    gap: 3rem;
+    padding: 3rem;
+  }
+}
 header .image {
   width: 8%;
 }
@@ -54,6 +70,14 @@ header .search {
   padding: 1.5rem 2rem;
   border-radius: 20px;
   margin-left: 2rem;
+}
+@media (max-width: 420px) {
+  header .search {
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-direction: row-reverse;
+  }
 }
 header .search input {
   border: none;
@@ -80,6 +104,11 @@ header .search i {
   position: fixed;
   left: 3%;
   top: 20%;
+}
+@media (max-width: 420px) {
+  .side-menu {
+    display: none;
+  }
 }
 .side-menu .part-1 {
   display: flex;
@@ -119,6 +148,16 @@ header .search i {
   color: white;
   width: 100%;
 }
+@media (max-width: 420px) {
+  .hero {
+    padding-inline: 3.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .hero {
+    flex-direction: column;
+  }
+}
 .hero .box1 {
   flex: 1;
 }
@@ -133,6 +172,11 @@ header .search i {
   width: 60%;
   padding-block: 2.5rem;
 }
+@media (max-width: 420px) {
+  .hero .box2 > p {
+    width: 100%;
+  }
+}
 .hero .box2 h1 {
   color: rgb(164, 199, 198);
   text-transform: capitalize;
@@ -146,6 +190,11 @@ header .search i {
   flex-direction: row;
   gap: 3rem;
   align-items: center;
+}
+@media (max-width: 420px) {
+  .hero .box2 .btns {
+    gap: 2rem;
+  }
 }
 .hero .box2 .btns .btn-1 {
   padding-block: 1.4rem;
@@ -192,6 +241,11 @@ header .search i {
   flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 420px) {
+  .playlist {
+    padding-inline: 3.5rem;
+  }
+}
 .playlist .song {
   display: flex;
   flex-direction: row;
@@ -208,6 +262,29 @@ header .search i {
   align-items: center;
   gap: 5rem;
 }
+@media (max-width: 420px) {
+  .playlist .song .box1 {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .playlist .song .box1 .like {
+    display: none;
+  }
+}
+.playlist .song .box2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10rem;
+}
+@media (max-width: 420px) {
+  .playlist .song .box2 {
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+  }
+}
 .playlist .song p {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
@@ -216,6 +293,11 @@ header .search i {
   padding-block: 2.5rem;
   text-transform: capitalize;
   text-align: left;
+}
+@media (max-width: 420px) {
+  .playlist .song p {
+    padding-block: 0rem;
+  }
 }
 
 .widget {
@@ -233,11 +315,21 @@ header .search i {
           backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 420px) {
+  .widget {
+    padding: 2rem;
+  }
+}
 .widget .song {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   align-self: flex-end;
+}
+@media (max-width: 420px) {
+  .widget .song {
+    align-items: center;
+  }
 }
 .widget .song h4 {
   color: rgb(255, 255, 255);
@@ -254,6 +346,11 @@ header .search i {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+@media (max-width: 420px) {
+  .widget .icons_and_playing {
+    display: none;
+  }
 }
 .widget .icons_and_playing .icons {
   display: flex;
@@ -272,6 +369,11 @@ header .search i {
   align-items: center;
   gap: 2rem;
 }
+@media (max-width: 420px) {
+  .widget .volume {
+    display: none;
+  }
+}
 .widget .volume-line {
   position: absolute;
   content: "";
@@ -279,4 +381,16 @@ header .search i {
   height: 2px;
   background-color: rgb(250, 205, 102);
   right: 9%;
+}
+.widget .hidden {
+  display: none;
+}
+.widget .hidden img {
+  width: 35px;
+}
+@media (max-width: 420px) {
+  .widget .hidden {
+    display: flex;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=album.css.map */
