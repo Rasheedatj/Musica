@@ -3,11 +3,12 @@
 
 html{
     font-size: 60.25%;
+    // scroll-behavior: smooth;
 }
 body{
     background-color: $mainBodyBg;
     font-family: 'Quicksand';
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -48,7 +49,7 @@ header{
     }
 
     .image{
-       width: 8%;
+       width: 10%;
     }
     .search{
         width: 90%;
@@ -140,7 +141,7 @@ header{
 
     .hero{
         padding-left: 18rem;
-        padding-top: 15rem;
+        padding-top: 13rem;
         padding-right: 10rem;
         padding-bottom: 5rem;
         @include flexNormal(row);
@@ -214,7 +215,7 @@ header{
         .top-charts{
             flex: 2;
             @include flexNormal(column);
-            gap: 1.1rem;
+            gap: 1rem;
 
             h1{
                 color: $white;
@@ -228,7 +229,7 @@ header{
                 align-items: center;
                 gap: 1rem;
                 background-color: $darkAlt;
-                padding: 1.8rem;
+                padding:1rem 1.5rem;
                 border-radius: 20px;
                
                 
@@ -384,7 +385,8 @@ header{
     @include flexNormal(row);
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding-inline: 4rem;
+    padding-bottom: 1rem;
     padding-top: 2rem;
     background-color: rgba(255, 255, 255, 0.1);
     z-index: 1000;
@@ -427,7 +429,7 @@ header{
     .icons_and_playing{
         @include flexNormal(column);
         align-items: center;
-        gap: 2rem;
+        gap: .8rem;
 
         // mobile code
         @include mobile{
@@ -499,10 +501,11 @@ header{
 
 
     .home{
-        margin-left: -1.2rem;
+        margin-left: -1rem;
 
-        p{
-            color: white
+        a{
+            color: white;
+            margin-left: -1rem;
         }
     }
 

@@ -13,7 +13,6 @@ html {
 body {
   background-color: rgb(29, 33, 35);
   font-family: "Quicksand";
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -69,7 +68,7 @@ header {
   }
 }
 header .image {
-  width: 8%;
+  width: 10%;
 }
 header .search {
   width: 90%;
@@ -171,7 +170,7 @@ header .ham-menu > div {
 
 .hero {
   padding-left: 18rem;
-  padding-top: 15rem;
+  padding-top: 13rem;
   padding-right: 10rem;
   padding-bottom: 5rem;
   display: flex;
@@ -242,7 +241,7 @@ header .ham-menu > div {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 .hero .top-charts h1 {
   color: rgb(255, 255, 255);
@@ -256,7 +255,7 @@ header .ham-menu > div {
   align-items: center;
   gap: 1rem;
   background-color: rgb(26, 30, 31);
-  padding: 1.8rem;
+  padding: 1rem 1.5rem;
   border-radius: 20px;
 }
 .hero .top-charts .chart h4, .hero .top-charts .chart a {
@@ -402,7 +401,8 @@ header .ham-menu > div {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding-inline: 4rem;
+  padding-bottom: 1rem;
   padding-top: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 1000;
@@ -446,7 +446,7 @@ header .ham-menu > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0.8rem;
 }
 @media (max-width: 420px) {
   .widget .icons_and_playing {
@@ -509,10 +509,11 @@ header .ham-menu > div {
   display: none;
 }
 .menu .home {
-  margin-left: -1.2rem;
+  margin-left: -1rem;
 }
-.menu .home p, .menu > div .home a {
+.menu .home a {
   color: white;
+  margin-left: -1rem;
 }
 .menu > div {
   display: flex;

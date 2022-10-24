@@ -43,7 +43,7 @@ header {
 }
 @media (max-width: 420px) {
   header {
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 3rem;
   }
 }
@@ -153,14 +153,15 @@ header .ham-menu > div {
   display: flex;
   flex-direction: row;
   padding-left: 19.5rem;
-  padding-top: 15rem;
+  padding-top: 13rem;
   padding-right: 10rem;
   padding-bottom: 5rem;
   gap: 5rem;
 }
 @media (max-width: 420px) {
   .btns {
-    padding-inline: 3.5rem;
+    padding-inline: 3rem;
+    gap: 4rem;
   }
 }
 .btns button {
@@ -206,7 +207,7 @@ header .ham-menu > div {
 }
 @media (max-width: 420px) {
   .collection {
-    padding-inline: 3.5rem;
+    padding-inline: 3rem;
     flex-direction: column;
   }
 }
@@ -361,9 +362,9 @@ header .ham-menu > div {
   display: none;
 }
 .menu .home {
-  margin-left: -1.2rem;
+  margin-left: -1rem;
 }
-.menu .home p, .menu > div .home a {
+.menu .home a {
   color: white;
   margin-left: -1rem;
 }
