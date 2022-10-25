@@ -44,7 +44,7 @@ header{
 
     // mobile code
     @include mobile{
-            gap: 3rem;
+            gap: 1.5rem;
             padding-inline: 3rem;
     }
 
@@ -326,6 +326,13 @@ header{
             display: none;
             z-index: 100;
             transition: display 2000ms ease;
+
+            @include mobile{
+                display: grid;
+                bottom: 45%;
+                width: 4rem;
+                height: 4rem;
+            }
         }
 
         &::before{
@@ -340,6 +347,12 @@ header{
             bottom: 40%;
             animation: pulse 650ms infinite;
             display: none;
+
+            @include mobile{
+                bottom: 45%;
+                width: 4rem;
+                height: 4rem;
+            }
         }
 
         &:hover{

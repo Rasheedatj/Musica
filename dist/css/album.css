@@ -25,11 +25,6 @@ body {
   position: relative;
   background-blend-mode: overlay;
 }
-@media (max-width: 420px) {
-  body {
-    background-image: url();
-  }
-}
 
 ::-webkit-scrollbar {
   width: 2em;
@@ -57,8 +52,9 @@ header {
 }
 @media (max-width: 420px) {
   header {
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 3rem;
+    position: static;
   }
 }
 header .image {
@@ -77,6 +73,7 @@ header .search {
     display: flex;
     gap: 3rem;
     flex-direction: row-reverse;
+    background-color: transparent;
   }
 }
 header .search input {
@@ -88,9 +85,40 @@ header .search input {
   width: 80%;
   color: rgb(255, 255, 255);
 }
+@media (max-width: 420px) {
+  header .search input {
+    margin-left: 0;
+  }
+}
+@media (max-width: 420px) {
+  header .search ::-moz-placeholder {
+    color: transparent;
+  }
+  header .search :-ms-input-placeholder {
+    color: transparent;
+  }
+  header .search ::placeholder {
+    color: transparent;
+  }
+}
 header .search i {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.5);
+}
+header .ham-menu {
+  display: none;
+}
+@media (max-width: 420px) {
+  header .ham-menu {
+    display: block;
+  }
+}
+header .ham-menu > div {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  margin-block: 1rem;
 }
 
 .side-menu {
@@ -151,6 +179,7 @@ header .search i {
 @media (max-width: 420px) {
   .hero {
     padding-inline: 3.5rem;
+    padding-top: 5rem;
   }
 }
 @media (max-width: 420px) {
@@ -160,11 +189,17 @@ header .search i {
 }
 .hero .box1 {
   flex: 1;
+  width: 100%;
+}
+@media (max-width: 420px) {
+  .hero .box1 img {
+    width: 100%;
+  }
 }
 .hero .box2 {
   flex: 3;
 }
-.hero .box2 > p {
+.hero .box2 > p, .hero .menu > div .box2 > a, .menu > div .hero .box2 > a {
   color: rgb(255, 255, 255);
   font-size: 1.7rem;
   line-height: 25px;
@@ -173,7 +208,7 @@ header .search i {
   padding-block: 2.5rem;
 }
 @media (max-width: 420px) {
-  .hero .box2 > p {
+  .hero .box2 > p, .hero .menu > div .box2 > a, .menu > div .hero .box2 > a {
     width: 100%;
   }
 }
@@ -190,10 +225,11 @@ header .search i {
   flex-direction: row;
   gap: 3rem;
   align-items: center;
+  justify-content: space-between;
 }
 @media (max-width: 420px) {
   .hero .box2 .btns {
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 .hero .box2 .btns .btn-1 {
@@ -255,6 +291,8 @@ header .search i {
   background-color: rgba(51, 55, 59, 0.8);
   padding: 0rem 2rem;
   border-radius: 20px;
+  position: relative;
+  padding: 1rem 2rem;
 }
 .playlist .song .box1 {
   display: flex;
@@ -277,15 +315,21 @@ header .search i {
   flex-direction: row;
   align-items: center;
   gap: 10rem;
+  position: absolute;
+  left: 30%;
 }
 @media (max-width: 420px) {
   .playlist .song .box2 {
     flex-direction: column;
     gap: 0;
     align-items: start;
+    line-height: 10px;
   }
 }
-.playlist .song p {
+.playlist .song .box2 .song-type {
+  line-height: 15px;
+}
+.playlist .song p, .playlist .song .menu > div a, .menu > div .playlist .song a {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   line-height: 25px;
@@ -295,9 +339,13 @@ header .search i {
   text-align: left;
 }
 @media (max-width: 420px) {
-  .playlist .song p {
+  .playlist .song p, .playlist .song .menu > div a, .menu > div .playlist .song a {
     padding-block: 0rem;
   }
+}
+.playlist .song > p, .playlist .menu > div .song > a, .menu > div .playlist .song > a {
+  position: absolute;
+  right: 20%;
 }
 
 .widget {
@@ -337,7 +385,7 @@ header .search i {
   font-size: 1.5rem;
   margin-bottom: 0.9rem;
 }
-.widget .song p {
+.widget .song p, .widget .song .menu > div a, .menu > div .widget .song a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
 }
@@ -393,4 +441,54 @@ header .search i {
     display: flex;
     gap: 2rem;
   }
+}
+
+.menu {
+  position: fixed;
+  background-color: rgb(29, 33, 35);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem;
+  padding-top: 10rem;
+  z-index: 100000;
+  display: none;
+}
+.menu .home {
+  margin-left: -1rem;
+}
+.menu .home a {
+  color: white;
+  margin-left: -1rem;
+}
+.menu > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+.menu > div P {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: rgba(239, 238, 224, 0.25);
+}
+.menu > div a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: rgba(239, 238, 224, 0.25);
+}
+.menu .close-btn {
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+}
+.menu .close-btn i {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.active.menu {
+  display: flex;
 }/*# sourceMappingURL=album.css.map */

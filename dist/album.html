@@ -14,6 +14,12 @@
 </head>
 <body>
     <header>
+      <!-- hamburger button -->
+      <div class="ham-menu">
+         <div></div>
+         <div></div>
+      </div>
+
         <div class="image"><a href="../index.html"><img src="./img/logo.svg" alt="musica logo"></a></div>
         <div class="search">
          <i class="fas fa-search"></i>
@@ -35,6 +41,38 @@
                <a href="#"><img src="./img/Vectorexit.svg" alt="exit"></a>
             </div>
          </aside>
+
+               <!-- hamburger menu -->
+      <section class="menu">
+         <div class="home">
+           <img src="./img/home.svg" alt="">
+           <a href="../index.html">home</a> 
+         </div>
+         <div>
+            <img src="./img/library.svg" alt="">
+            <a href="./dist/collection.html">my collections</a>
+         </div>
+         <div>
+            <img src="./img/radio.svg" alt="">
+            <p>radio</p>
+         </div>
+         <div>
+            <img src="./img/video-horizontalvideo.svg" alt="">
+            <p>music videos</p>
+      </div>
+         <div>
+            <img src="./img/profile.svg" alt="">
+            <p>profile</p>
+         </div>
+         <div>
+            <img src="./img/Vectorexit.svg" alt="">
+            <p>log out</p>
+         </div>
+
+            <section class="close-btn">
+               <i class="fas fa-times"></i>
+            </section>
+      </section>
 
          <!-- hero -->
          <section class="hero">
@@ -75,7 +113,7 @@
               </div>
              <div class="box2">
                <p>let me love you - krisk</p>
-               <p>single</p>
+               <p class="song-type">single</p>
              </div>
               <p>4:17</p>
               <div class="options">
@@ -90,7 +128,7 @@
               </div>
               <div class="box2">
                   <p>Watin man go do ~ Burna</p>
-                  <p>African giant</p>
+                  <p class="song-type">African giant</p>
               </div>
               <p>2:30</p>
 
@@ -106,7 +144,7 @@
               </div>
               <div class="box2">
                <p>Stand strong ~ Davido</p>
-               <p>single</p>
+               <p class="song-type">single</p>
             </div>
               <p>2:02</p>
 
@@ -122,7 +160,7 @@
               </div>
               <div class="box2">
                <p>Closa ~ Ybee</p>
-               <p>obi datti</p>
+               <p class="song-type">obi datti</p>
             </div>
               <p>3:23</p>
 
@@ -138,7 +176,7 @@
               </div>
               <div class="box2">
                <p>Ku lo sa ~ Oxlade</p>
-              <p>single</p>
+              <p class="song-type">single</p>
             </div>
               <p>3:23</p>
 
@@ -184,5 +222,20 @@
       <img src="./img/next.svg" alt="next">
    </div>
 </section>
+
+<script>
+   let open = document.querySelector('.ham-menu')
+let menu = document.querySelector('.menu')
+let close = document.querySelector('.close-btn')
+
+open.addEventListener('click', function(){
+  menu.classList.toggle('active')
+})
+
+close.addEventListener('click', function(){
+  menu.classList.remove('active')
+})
+
+</script>
 </body>
 </html>

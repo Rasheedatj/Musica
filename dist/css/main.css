@@ -63,7 +63,7 @@ header {
 }
 @media (max-width: 420px) {
   header {
-    gap: 3rem;
+    gap: 1.5rem;
     padding-inline: 3rem;
   }
 }
@@ -347,6 +347,14 @@ header .ham-menu > div {
   z-index: 100;
   transition: display 2000ms ease;
 }
+@media (max-width: 420px) {
+  .swiper .swiper-slide::after {
+    display: grid;
+    bottom: 45%;
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .swiper .swiper-slide::before {
   position: absolute;
   content: "";
@@ -360,6 +368,13 @@ header .ham-menu > div {
   -webkit-animation: pulse 650ms infinite;
           animation: pulse 650ms infinite;
   display: none;
+}
+@media (max-width: 420px) {
+  .swiper .swiper-slide::before {
+    bottom: 45%;
+    width: 4rem;
+    height: 4rem;
+  }
 }
 .swiper .swiper-slide:hover {
   background-color: rgba(51, 55, 59, 0.8);
