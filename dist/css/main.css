@@ -328,6 +328,9 @@ header .ham-menu > div {
     padding: 1rem;
   }
 }
+.swiper .swiper-slide .blind {
+  border-radius: 2.8rem;
+}
 .swiper .swiper-slide::after {
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -342,7 +345,7 @@ header .ham-menu > div {
   display: grid;
   place-items: center;
   right: 15%;
-  bottom: 40%;
+  bottom: 43%;
   display: none;
   z-index: 100;
   transition: display 2000ms ease;
@@ -364,7 +367,7 @@ header .ham-menu > div {
   background-color: rgba(250, 205, 102, 0.3);
   z-index: 1;
   right: 15%;
-  bottom: 40%;
+  bottom: 43%;
   -webkit-animation: pulse 650ms infinite;
           animation: pulse 650ms infinite;
   display: none;
@@ -380,7 +383,7 @@ header .ham-menu > div {
   background-color: rgba(51, 55, 59, 0.8);
 }
 .swiper .swiper-slide img {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .swiper .swiper-slide h4, .swiper .swiper-slide .hero .top-charts .chart a, .hero .top-charts .chart .swiper .swiper-slide a {
   color: rgb(255, 255, 255);
@@ -496,7 +499,7 @@ header .ham-menu > div {
   width: 8rem;
   height: 2px;
   background-color: rgb(250, 205, 102);
-  right: 9%;
+  right: 10%;
 }
 .widget .hidden {
   display: none;

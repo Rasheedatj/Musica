@@ -307,6 +307,9 @@ header{
             padding: 1rem;
         }
      
+        .blind{
+            border-radius: 2.8rem;
+        }
 
         &::after{
             position: absolute;
@@ -322,7 +325,7 @@ header{
             display: grid;
             place-items: center;
             right: 15%;
-            bottom: 40%;
+            bottom: 43%;
             display: none;
             z-index: 100;
             transition: display 2000ms ease;
@@ -344,7 +347,7 @@ header{
             background-color: rgba(250, 205, 102, .3);
             z-index: 1;
             right: 15%;
-            bottom: 40%;
+            bottom: 43%;
             animation: pulse 650ms infinite;
             display: none;
 
@@ -359,7 +362,7 @@ header{
             background-color: $accentAlt;
         }
         img{
-            padding-bottom: 2rem;
+            margin-bottom: 2rem;
         }
         h4{
             color: $white;
@@ -405,6 +408,8 @@ header{
     z-index: 1000;
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, .2);
+
+
     // mobile code
     @include mobile{
         padding: 1rem 2rem
@@ -477,7 +482,7 @@ header{
         width: 8rem;
         height: 2px;
         background-color: $yellow;
-        right: 9%;
+        right: 10%;
     }
     .hidden{
         display: none;
