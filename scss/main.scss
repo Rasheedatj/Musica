@@ -3,12 +3,14 @@
 
 html{
     font-size: 60.25%;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+img[alt=scss]{
+    width: 20px;
 }
 body{
     background-color: $mainBodyBg;
     font-family: 'Quicksand';
-    // scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -412,7 +414,7 @@ header{
 
     // mobile code
     @include mobile{
-        padding: 1rem 2rem
+        padding: 0rem 2rem
     }
 
 
