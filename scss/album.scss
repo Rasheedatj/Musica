@@ -182,7 +182,10 @@ header{
         }
     .box2{
         flex: 3;
-        text-align: center;
+       
+        @include mobile{
+            text-align: center;
+        }
         & > p{
             color: $white;
             font-size: 1.7rem;
