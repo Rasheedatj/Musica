@@ -282,6 +282,7 @@ header{
             border-radius: 20px;
             position: relative;
             padding: 1rem 2rem;
+           
 
             .box1{
                 @include flexNormal(row);
@@ -304,6 +305,7 @@ header{
                 gap: 10rem;
                 position: absolute;
                 left: 25%;
+             
 
                 @include mobile{
                     flex-direction: column;
@@ -328,6 +330,7 @@ header{
 
                 @include mobile{
                     padding-block: 0rem;
+                    font-size: 1.4rem;
                 }
             }
             > p{

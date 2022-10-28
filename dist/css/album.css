@@ -348,6 +348,7 @@ header .ham-menu > div {
 @media (max-width: 420px) {
   .playlist .song p, .playlist .song .menu > div a, .menu > div .playlist .song a {
     padding-block: 0rem;
+    font-size: 1.4rem;
   }
 }
 .playlist .song > p, .playlist .menu > div .song > a, .menu > div .playlist .song > a {
