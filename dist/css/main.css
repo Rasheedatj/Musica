@@ -12,10 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-img[alt=scss] {
-  width: 20px;
-}
-
 body {
   background-color: rgb(29, 33, 35);
   font-family: "Quicksand";
@@ -244,7 +240,7 @@ header .ham-menu > div {
   }
 }
 .hero .top-charts {
-  flex: 2;
+  flex: 2.5;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -261,8 +257,13 @@ header .ham-menu > div {
   align-items: center;
   gap: 1rem;
   background-color: rgb(26, 30, 31);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 20px;
+}
+@media (max-width: 420px) {
+  .hero .top-charts .chart {
+    padding: 1rem 1.5rem;
+  }
 }
 .hero .top-charts .chart h4, .hero .top-charts .chart a {
   color: rgb(255, 255, 255);

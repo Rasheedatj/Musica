@@ -5,9 +5,7 @@ html{
     font-size: 60.25%;
     scroll-behavior: smooth;
 }
-img[alt=scss]{
-    width: 20px;
-}
+
 body{
     background-color: $mainBodyBg;
     font-family: 'Quicksand';
@@ -215,7 +213,7 @@ header{
         }
 
         .top-charts{
-            flex: 2;
+            flex: 2.5;
             @include flexNormal(column);
             gap: 1rem;
 
@@ -231,10 +229,13 @@ header{
                 align-items: center;
                 gap: 1rem;
                 background-color: $darkAlt;
-                padding:1rem 1.5rem;
+                padding:1rem 2rem;
                 border-radius: 20px;
+
+                @include mobile{
+                    padding: 1rem 1.5rem;
+                }
                
-                
                 h4{
                     color: $white;
                     font-weight: 400;
