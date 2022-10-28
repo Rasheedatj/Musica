@@ -46,10 +46,7 @@ header {
   align-items: center;
   flex-direction: row;
   padding: 3rem 5.5rem;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 100;
 }
 @media (max-width: 420px) {
   header {
@@ -60,6 +57,16 @@ header {
 }
 header .image {
   width: 8%;
+  top: 4rem;
+  left: 5.5rem;
+  position: fixed;
+  z-index: 10;
+}
+@media (max-width: 420px) {
+  header .image {
+    padding-left: 2rem;
+    position: static;
+  }
 }
 header .search {
   width: 90%;
@@ -226,7 +233,6 @@ header .ham-menu > div {
   flex-direction: row;
   gap: 3rem;
   align-items: center;
-  justify-content: space-between;
 }
 @media (max-width: 420px) {
   .hero .box2 .btns {
@@ -317,7 +323,7 @@ header .ham-menu > div {
   align-items: center;
   gap: 10rem;
   position: absolute;
-  left: 30%;
+  left: 25%;
 }
 @media (max-width: 420px) {
   .playlist .song .box2 {
