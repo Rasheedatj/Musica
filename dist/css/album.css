@@ -206,6 +206,7 @@ header .ham-menu > div {
 }
 .hero .box2 {
   flex: 3;
+  text-align: center;
 }
 .hero .box2 > p, .hero .menu > div .box2 > a, .menu > div .hero .box2 > a {
   color: rgb(255, 255, 255);
