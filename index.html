@@ -1,287 +1,343 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./dist/img/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./dist/img/logo.svg" type="image/x-icon" />
     <!-- font awesome url -->
-     <script src="https://kit.fontawesome.com/2bfe15d79d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2bfe15d79d.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <!-- Css link -->
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Musica</title>
- </head>
- <body>
-   <header>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <a href="#"><img src="./dist/img/logo.svg" alt="musica logo" /></a>
+      </div>
+
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="search" placeholder="Search artists" />
+      </div>
 
       <!-- hamburger button -->
       <div class="ham-menu">
-         <div></div>
-         <div></div>
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-     <div class="image"><a href="#"><img src="./dist/img/logo.svg" alt="musica logo"></a></div>
-     <div class="search">
-      <i class="fas fa-search"></i>
-      <input type="search" placeholder="Search artists">
-     </div>
-   </header>
+    </header>
 
-   <!-- side nav -->
+    <!-- hamburger menu -->
+    <section class="menu">
+      <div class="home">
+        <img src="./dist/img/home.svg" alt="" />
+        <a href="./index.html">home</a>
+      </div>
+      <div>
+        <img src="./dist/img/library.svg" alt="" />
+        <a href="./dist/collection.html">my collections</a>
+      </div>
+      <div>
+        <img src="./dist/img/radio.svg" alt="" />
+        <p>radio</p>
+      </div>
+      <div>
+        <img src="./dist/img/video-horizontalvideo.svg" alt="" />
+        <p>music videos</p>
+      </div>
+      <div>
+        <img src="./dist/img/profile.svg" alt="" />
+        <p>profile</p>
+      </div>
+      <div>
+        <img src="./dist/img/Vectorexit.svg" alt="" />
+        <p>log out</p>
+      </div>
+
+      <section class="close-btn">
+        <i class="fas fa-times"></i>
+      </section>
+    </section>
+
+    <main>
+      <!-- side nav -->
       <aside class="side-menu">
-         <div class="part-1">
-            <a href="#"><img src="./dist/img/home.svg" alt="home icon"></a>
-            <a href="./dist/collection.html"><img src="./dist/img/library.svg" alt="music library"></a>
-            <a href="#"><img src="./dist/img/radio.svg" alt="radio"></a>
-            <a href="#"><img src="./dist/img/video-horizontalvideo.svg" alt="videos"></a>
-         </div>
+        <div class="part-1">
+          <a href="#"><img src="./dist/img/home.svg" alt="home icon" /></a>
+          <a href="./dist/collection.html"
+            ><img src="./dist/img/library.svg" alt="music library"
+          /></a>
+          <a href="#"><img src="./dist/img/radio.svg" alt="radio" /></a>
+          <a href="#"
+            ><img src="./dist/img/video-horizontalvideo.svg" alt="videos"
+          /></a>
+        </div>
 
-         <div class="part-2">
-            <a href="#"><img src="./dist/img/profile.svg" alt="profile"></a>
-            <a href="#"><img src="./dist/img/Vectorexit.svg" alt="exit"></a>
-         </div>
+        <div class="part-2">
+          <a href="#"><img src="./dist/img/profile.svg" alt="profile" /></a>
+          <a href="#"><img src="./dist/img/Vectorexit.svg" alt="exit" /></a>
+        </div>
       </aside>
 
-      <!-- hamburger menu -->
-      <section class="menu">
-         <div class="home">
-           <img src="./dist/img/home.svg" alt="">
-           <a href="./index.html">home</a> 
-         </div>
-         <div>
-            <img src="./dist/img/library.svg" alt="">
-            <a href="./dist/collection.html">my collections</a>
-         </div>
-         <div>
-            <img src="./dist/img/radio.svg" alt="">
-            <p>radio</p>
-         </div>
-         <div>
-            <img src="./dist/img/video-horizontalvideo.svg" alt="">
-            <p>music videos</p>
-      </div>
-         <div>
-            <img src="./dist/img/profile.svg" alt="">
-            <p>profile</p>
-         </div>
-         <div>
-            <img src="./dist/img/Vectorexit.svg" alt="">
-            <p>log out</p>
-         </div>
-
-            <section class="close-btn">
-               <i class="fas fa-times"></i>
-            </section>
-      </section>
-
-
-     <!-- hero setion and top charts -->
-      <section class="hero">
-         <div class="cta">
+      <section class="container">
+        <!-- hero setion and top charts -->
+        <section class="hero">
+          <div class="cta">
             <p>Curated playlist</p>
 
             <div class="description">
-               <h1>R & B Hits</h1>
-               <p class="title">
-                  All mine, Lie again, Petty call me everyday,
-                  Out of time, No love, Bad habit,
-                  and so much more
-               </p>
+              <h1>R & B Hits</h1>
+              <p class="title">
+                All mine, Lie again, Petty call me everyday, Out of time, No
+                love, Bad habit, and so much more
+              </p>
             </div>
 
-               <div class="footer">
-                  <img src="./dist/img/hero-avatars.svg" alt="hero-avatars">
-                  <img src="./dist/img/white-heart.svg" alt="heart">
-                  <p class="likes">33k Likes</p>
-               </div>
-           
-         </div>
+            <div class="footer">
+              <img src="./dist/img/hero-avatars.svg" alt="hero-avatars" />
+              <img src="./dist/img/white-heart.svg" alt="heart" />
+              <p class="likes">33k Likes</p>
+            </div>
+          </div>
 
-         <section class="top-charts">
+          <!-- top chart -->
+          <section class="top-charts">
             <h1>top charts</h1>
+
             <div class="chart">
-               <div class="img"><img src="./dist/img/top-chart-1.svg" alt="charts one"></div>
-               <div class="music-info">
-                  <h4>Golden age of 80s</h4>
-                  <p class="title">sean swadder</p>
-                  <p class="duration">2:34:35</p>
-               </div>
-               <div class="heart">
-                  <img src="./dist/img/Heartempty-heart.svg" id="like" alt="heart">
-                  <i class="fa fa-heart" id="filled-heart" aria-hidden="true"></i>
-               </div>
+              <div class="img">
+                <img src="./dist/img/top-chart-1.svg" alt="charts one" />
+              </div>
+              <div class="music-info">
+                <a href="./dist/album.html">Golden age of 80s</a>
+                <p class="title">sean swadder</p>
+                <p class="duration">2:34:35</p>
+              </div>
+              <div class="heart">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
             </div>
 
             <div class="chart">
-               <div class="img"><img src="./dist/img/top charts-2.svg" alt="charts two"></div>
-               <div class="music-info">
-                  <h4>Reggae 'n' blues</h4>
-                  <p class="title">dj yk mule</p>
-                  <p class="duration">1:02:42</p>
-               </div>
-               <div class="heart heart2">
-                  <img src="./dist/img/Heartempty-heart.svg" id="like2" alt="heart">
-                  <i class="fa fa-heart" id="filled-heart2" aria-hidden="true"></i>
-               </div>
+              <div class="img">
+                <img src="./dist/img/top charts-2.svg" alt="charts two" />
+              </div>
+              <div class="music-info">
+                <a href="./dist/album.html">Reggae 'n' blues</a>
+                <p class="title">dj yk mule</p>
+                <p class="duration">1:02:42</p>
+              </div>
+              <div class="heart">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
             </div>
 
             <div class="chart">
-               <div class="img"><img src="./dist/img/top charst-3.svg" alt="charts three"></div>
-               <div class="music-info">
-                  <a href="./dist/album.html">Tomorrow’s tunes</a>
-                  <p class="title">obi datti</p>
-                  <p class="duration">2:01:25</p>
-               </div>
-               <div class="heart heart3">
-                  <img src="./dist/img/Heartempty-heart.svg" id="like3" alt="heart">
-                  <i class="fa fa-heart" id="filled-heart3" aria-hidden="true"></i>
-               </div>
+              <div class="img">
+                <img src="./dist/img/top charst-3.svg" alt="charts three" />
+              </div>
+              <div class="music-info">
+                <a href="./dist/album.html">Tomorrow’s tunes</a>
+                <p class="title">obi datti</p>
+                <p class="duration">2:01:25</p>
+              </div>
+              <div class="heart">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
             </div>
-         </section>
-</section>
+          </section>
+        </section>
 
+        <!-- new release -->
+        <div class="swiper mySwiper">
+          <h1>new release</h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide active">
+              <img src="./dist/img/new release-1.svg" alt="release1" />
+              <h4 class="title">Life in a bubble</h4>
+              <p class="authur">the van</p>
 
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
 
-<!-- new release -->
-<div class="swiper mySwiper">
-   <h1>new release</h1>
-   <div class="swiper-wrapper">
-      <div class="swiper-slide active">
-         <img src="./dist/img/new release-1.svg" alt="release1">
-         <h4 class="title">Life in a bubble</h4>
-         <p class="authur">the van</p>
+            <div class="swiper-slide active">
+              <img src="./dist/img/new release-2.svg" alt="release" />
+              <h4 class="title">mountain</h4>
+              <p class="authur">krisk</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-3.svg" alt="release" />
+              <h4 class="title">limits</h4>
+              <p class="authur">john dillion</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new release-4.svg" alt="release" />
+              <h4 class="title">everything black</h4>
+              <p class="authur">ameed</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-5.svg" alt="release" />
+              <h4 class="title">cancelled</h4>
+              <p class="authur">eminem</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-6.svg" alt="release" />
+              <h4 class="title">nomad</h4>
+              <p class="authur">makrod eli</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/blind.svg" alt="release" class="blind" />
+              <h4 class="title">blind</h4>
+              <p class="authur">wiz zee</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- popular in your area -->
+        <div class="swiper mySwiper popular">
+          <h1>popular in your area</h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./dist/img/new release-1.svg" alt="release1" />
+              <h4 class="title">Life in a bubble</h4>
+              <p class="authur">the van</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new release-2.svg" alt="release" />
+              <h4 class="title">mountain</h4>
+              <p class="authur">krisk</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-3.svg" alt="release" />
+              <h4 class="title">limits</h4>
+              <p class="authur">john dillion</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new release-4.svg" alt="release" />
+              <h4 class="title">everything black</h4>
+              <p class="authur">ameed</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-5.svg" alt="release" />
+              <h4 class="title">cancelled</h4>
+              <p class="authur">eminem</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/new-release-6.svg" alt="release" />
+              <h4 class="title">nomad</h4>
+              <p class="authur">makrod eli</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./dist/img/blind.svg" alt="release" class="blind" />
+              <h4 class="title">blind</h4>
+              <p class="authur">wiz zee</p>
+              <div>
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- MP3 player -->
+    <section class="widget">
+      <div class="song">
+        <div id="cover">
+          <img src="./dist/img/season-in-avatar.svg" alt="song playing" />
+        </div>
+        <div class="song-info">
+          <h4 id="title">seasons in</h4>
+          <p id="artist">james</p>
+        </div>
       </div>
 
-      <div class="swiper-slide active">
-         <img src="./dist/img/new release-2.svg" alt="release">
-         <h4 class="title">mountain</h4>
-         <p class="authur">krisk</p>
+      <div class="icons_and_playing">
+        <div class="icons">
+          <img src="./dist/img/shuffle.svg" alt="shuffle" id="shuffle" />
+          <img src="./dist/img/previous.svg" alt="previous" id="prev" />
+          <div class="playBtn">
+            <i class="fas fa-play"></i>
+          </div>
+          <img src="./dist/img/next.svg" alt="next" id="next" />
+          <img src="./dist/img/repeate-one.svg" alt="repeat" id="repeat" />
+        </div>
+        <div class="playing-container">
+          <div class="progress"></div>
+        </div>
       </div>
 
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-3.svg" alt="release">
-         <h4 class="title">limits</h4>
-         <p class="authur">john dillion </p>
+      <div class="volume">
+        <img src="./dist/img/volume-high.svg" alt="volume" />
+        <input type="range" min="0" max="1" value="1" step="0.01" />
       </div>
 
-      <div class="swiper-slide">
-         <img src="./dist/img/new release-4.svg" alt="release">
-         <h4 class="title">everything black</h4>
-         <p class="authur">ameed</p>
+      <div class="hidden">
+        <img src="./dist/img/previous.svg" alt="next" />
+        <img src="./dist/img/play-all.svg" alt="play all" class="play-all" />
+        <img src="./dist/img/next.svg" alt="next" />
       </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-5.svg" alt="release">
-         <h4 class="title">cancelled</h4>
-         <p class="authur">eminem</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-6.svg" alt="release">
-         <h4 class="title">nomad</h4>
-         <p class="authur">makrod eli</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/blind.svg" alt="release" class="blind">
-         <h4 class="title">blind</h4>
-         <p class="authur">wiz zee</p>
-      </div>
-   </div>
-</div>
-
-<!-- popular in your area -->
-<div class="swiper mySwiper popular">
-   <h1>popular in your area</h1>
-   <div class="swiper-wrapper">
-      <div class="swiper-slide">
-         <img src="./dist/img/new release-1.svg" alt="release1">
-         <h4 class="title">Life in a bubble</h4>
-         <p class="authur">the van</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new release-2.svg" alt="release">
-         <h4 class="title">mountain</h4>
-         <p class="authur">krisk</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-3.svg" alt="release">
-         <h4 class="title">limits</h4>
-         <p class="authur">john dillion </p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new release-4.svg" alt="release">
-         <h4 class="title">everything black</h4>
-         <p class="authur">ameed</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-5.svg" alt="release">
-         <h4 class="title">cancelled</h4>
-         <p class="authur">eminem</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/new-release-6.svg" alt="release">
-         <h4 class="title">nomad</h4>
-         <p class="authur">makrod eli</p>
-      </div>
-
-      <div class="swiper-slide">
-         <img src="./dist/img/blind.svg" alt="release" class="blind">
-         <h4 class="title">blind</h4>
-         <p class="authur">wiz zee</p>
-      </div>
-   </div>
-</div>
-
-<!-- MP3 player -->
-<section class="widget">
-   <div class="song">
-      <div>
-         <img src="./dist/img/season-in-avatar.svg" alt="song playing">
-      </div>
-      <div class="song-info">
-         <h4>seasons in</h4>
-         <p>james</p>
-      </div>
-   </div>
-
-   <div class="icons_and_playing">
-      <div class="icons">
-         <img src="./dist/img/shuffle.svg" alt="shuffle">
-         <img src="./dist/img/previous.svg" alt="previous">
-         <img src="./dist/img/play-all.svg" alt="play all" class="play-all">
-         <img src="./dist/img/next.svg" alt="next">
-         <img src="./dist/img/repeate-one.svg" alt="repeat">
-      </div>
-      <div class="playing">
-         <img src="./dist/img/Group 2.svg" alt="playing">
-      </div>
-   </div>
-
-   <div class="volume">
-      <img src="./dist/img/volume-high.svg" alt="volume">
-     <img src="./dist/img/Rectangle 18volume-line.svg" alt="volume">
-     <div class="volume-line">    </div>
-   </div>
-
-   <div class="hidden">
-      <img src="./dist/img/play-all.svg" alt="play all" class="play-all">
-      <img src="./dist/img/next.svg" alt="next">
-   </div>
-</section>
-pt>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="./dist/app.js"></script>
- </body>
- </html>
-
-
-
-
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./dist/app.js"></script>
+  </body>
+</html>

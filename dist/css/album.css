@@ -28,7 +28,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 2em;
+  width: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -37,7 +37,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(120, 169, 183);
-  border-radius: 5rem;
 }
 
 header {
@@ -46,26 +45,28 @@ header {
   align-items: center;
   flex-direction: row;
   padding: 3rem 5.5rem;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
 }
 @media (max-width: 420px) {
   header {
-    gap: 1.5rem;
-    padding: 3rem;
-    position: static;
+    justify-content: space-between;
+    padding-inline: 2rem;
   }
 }
-header .image {
-  width: 8%;
-  top: 4rem;
-  left: 5.5rem;
-  position: fixed;
-  z-index: 10;
+header .logo {
+  width: 10%;
 }
 @media (max-width: 420px) {
-  header .image {
-    padding-left: 2rem;
-    position: static;
+  header .logo {
+    width: 10%;
+  }
+}
+@media (max-width: 420px) {
+  header .logo img {
+    width: 90%;
   }
 }
 header .search {
@@ -73,15 +74,13 @@ header .search {
   background-color: rgb(26, 30, 31);
   padding: 1.5rem 2rem;
   border-radius: 20px;
-  margin-left: 2rem;
 }
 @media (max-width: 420px) {
   header .search {
     padding: 1rem 2rem;
     display: flex;
-    gap: 3rem;
-    flex-direction: row-reverse;
-    background-color: transparent;
+    gap: 1rem;
+    width: 70%;
   }
 }
 header .search input {
@@ -91,26 +90,15 @@ header .search input {
   margin-left: 3rem;
   background-color: transparent;
   width: 80%;
-  color: rgb(255, 255, 255);
+  color: rgb(29, 33, 35);
 }
 @media (max-width: 420px) {
   header .search input {
     margin-left: 0;
   }
 }
-@media (max-width: 420px) {
-  header .search ::-moz-placeholder {
-    color: transparent;
-  }
-  header .search :-ms-input-placeholder {
-    color: transparent;
-  }
-  header .search ::placeholder {
-    color: transparent;
-  }
-}
 header .search i {
-  font-size: 24px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
 }
 header .ham-menu {
@@ -121,15 +109,26 @@ header .ham-menu {
     display: block;
   }
 }
-header .ham-menu > div {
-  width: 3rem;
-  height: 0.4rem;
-  background-color: rgb(255, 255, 255);
-  color: white;
+header .ham-menu i {
+  font-size: 3rem;
+  color: rgb(120, 169, 183);
   margin-block: 1rem;
 }
 
-.side-menu {
+main {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  padding-inline: 5.5rem;
+}
+@media (max-width: 420px) {
+  main {
+    padding: 15rem 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+main aside {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,16 +136,15 @@ header .ham-menu > div {
   gap: 6rem;
   justify-content: start;
   align-items: flex-start;
+  width: 10%;
   position: fixed;
-  left: 3%;
-  top: 20%;
 }
 @media (max-width: 420px) {
-  .side-menu {
+  main aside {
     display: none;
   }
 }
-.side-menu .part-1 {
+main aside .part-1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +154,7 @@ header .ham-menu > div {
   padding: 1rem 0.8rem;
   border-radius: 25px;
 }
-.side-menu .part-2 {
+main aside .part-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,16 +165,20 @@ header .ham-menu > div {
   padding: 2rem 1.5rem;
   border-radius: 25px;
 }
-
-.active.collection {
-  background-color: rgb(250, 205, 102);
+main .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-left: 10%;
 }
-
-.hero {
-  padding-left: 19.5rem;
-  padding-top: 14rem;
-  padding-right: 10rem;
-  padding-bottom: 5rem;
+@media (max-width: 420px) {
+  main .container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+main .container .hero {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -185,34 +187,28 @@ header .ham-menu > div {
   width: 100%;
 }
 @media (max-width: 420px) {
-  .hero {
-    padding-inline: 3.5rem;
-    padding-top: 5rem;
-  }
-}
-@media (max-width: 420px) {
-  .hero {
+  main .container .hero {
     flex-direction: column;
   }
 }
-.hero .box1 {
+main .container .hero .box1 {
   flex: 1;
   width: 100%;
 }
 @media (max-width: 420px) {
-  .hero .box1 img {
+  main .container .hero .box1 img {
     width: 100%;
   }
 }
-.hero .box2 {
+main .container .hero .box2 {
   flex: 3;
 }
 @media (max-width: 420px) {
-  .hero .box2 {
+  main .container .hero .box2 {
     text-align: center;
   }
 }
-.hero .box2 > p, .hero .menu > div .box2 > a, .menu > div .hero .box2 > a {
+main .container .hero .box2 > p, main .container .hero .menu > div .box2 > a, .menu > div main .container .hero .box2 > a {
   color: rgb(255, 255, 255);
   font-size: 1.7rem;
   line-height: 25px;
@@ -221,11 +217,13 @@ header .ham-menu > div {
   padding-block: 2.5rem;
 }
 @media (max-width: 420px) {
-  .hero .box2 > p, .hero .menu > div .box2 > a, .menu > div .hero .box2 > a {
+  main .container .hero .box2 > p, main .container .hero .menu > div .box2 > a, .menu > div main .container .hero .box2 > a {
     width: 100%;
+    padding-block: 0;
+    padding-bottom: 2.5rem;
   }
 }
-.hero .box2 h1 {
+main .container .hero .box2 h1 {
   color: rgb(164, 199, 198);
   text-transform: capitalize;
   font-size: 4rem;
@@ -233,21 +231,21 @@ header .ham-menu > div {
   line-height: 42px;
   padding-bottom: 1rem;
 }
-.hero .box2 .btns {
+main .container .hero .box2 .btns {
   display: flex;
   flex-direction: row;
   gap: 3rem;
   align-items: center;
 }
 @media (max-width: 420px) {
-  .hero .box2 .btns {
+  main .container .hero .box2 .btns {
     gap: 1rem;
   }
 }
-.hero .box2 .btns .btn-1 {
-  padding-block: 1.4rem;
+main .container .hero .box2 .btns .btn-1 {
+  padding-block: 1.3rem;
 }
-.hero .box2 .btns button {
+main .container .hero .box2 .btns button {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
@@ -261,7 +259,7 @@ header .ham-menu > div {
   font-size: 1.8rem;
   cursor: pointer;
 }
-.hero .box2 .btns button i {
+main .container .hero .box2 .btns button i {
   font-size: 14px;
   color: black;
   height: 2.5rem;
@@ -271,7 +269,7 @@ header .ham-menu > div {
   place-items: center;
   background-color: rgb(250, 205, 102);
 }
-.hero .box2 .btns .img {
+main .container .hero .box2 .btns .img {
   height: 4rem;
   width: 4rem;
   background-color: rgba(51, 55, 59, 0.8);
@@ -279,86 +277,49 @@ header .ham-menu > div {
   display: grid;
   place-items: center;
 }
-
-.playlist {
-  padding-left: 19.5rem;
-  padding-top: 3rem;
-  padding-right: 10rem;
-  padding-bottom: 12rem;
+main .container .playlist {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-@media (max-width: 420px) {
-  .playlist {
-    padding-inline: 3.5rem;
-  }
-}
-.playlist .song {
+main .container .playlist .song {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   color: white;
   background-color: rgba(51, 55, 59, 0.8);
   padding: 0rem 2rem;
   border-radius: 20px;
-  position: relative;
   padding: 1rem 2rem;
 }
-.playlist .song .box1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5rem;
+main .container .playlist .song #cover,
+main .container .playlist .song #like {
+  width: 10%;
 }
-@media (max-width: 420px) {
-  .playlist .song .box1 {
-    gap: 1.5rem;
-  }
+main .container .playlist .song #title {
+  width: 40%;
 }
-@media (max-width: 420px) {
-  .playlist .song .box1 .like {
-    display: none;
-  }
+main .container .playlist .song .song-type {
+  width: 20%;
 }
-.playlist .song .box2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10rem;
-  position: absolute;
-  left: 25%;
-}
-@media (max-width: 420px) {
-  .playlist .song .box2 {
-    flex-direction: column;
-    gap: 0;
-    align-items: start;
-    line-height: 10px;
-  }
-}
-.playlist .song .box2 .song-type {
-  line-height: 15px;
-}
-.playlist .song p, .playlist .song .menu > div a, .menu > div .playlist .song a {
+main .container .playlist .song p, main .container .playlist .song .menu > div a, .menu > div main .container .playlist .song a {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   line-height: 25px;
   font-weight: 400;
-  padding-block: 2.5rem;
   text-transform: capitalize;
   text-align: left;
 }
 @media (max-width: 420px) {
-  .playlist .song p, .playlist .song .menu > div a, .menu > div .playlist .song a {
-    padding-block: 0rem;
+  main .container .playlist .song p, main .container .playlist .song .menu > div a, .menu > div main .container .playlist .song a {
     font-size: 1.4rem;
   }
 }
-.playlist .song > p, .playlist .menu > div .song > a, .menu > div .playlist .song > a {
-  position: absolute;
-  right: 20%;
+main .container .playlist .song .options {
+  width: 20%;
+  display: flex;
+  justify-content: end;
 }
 
 .widget {
@@ -367,9 +328,9 @@ header .ham-menu > div {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding-inline: 4rem;
+  padding-block: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 1000;
   -webkit-backdrop-filter: blur(10px);
@@ -378,7 +339,8 @@ header .ham-menu > div {
 }
 @media (max-width: 420px) {
   .widget {
-    padding: 2rem;
+    padding: 0rem 2rem;
+    justify-content: space-between;
   }
 }
 .widget .song {
@@ -386,10 +348,16 @@ header .ham-menu > div {
   flex-direction: row;
   gap: 1.5rem;
   align-self: flex-end;
+  width: 15%;
 }
 @media (max-width: 420px) {
   .widget .song {
     align-items: center;
+  }
+}
+@media (max-width: 420px) {
+  .widget .song img {
+    margin-top: 2rem;
   }
 }
 .widget .song h4 {
@@ -401,12 +369,14 @@ header .ham-menu > div {
 .widget .song p, .widget .song .menu > div a, .menu > div .widget .song a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
+  padding-block: 0.5rem;
 }
 .widget .icons_and_playing {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  width: 60%;
 }
 @media (max-width: 420px) {
   .widget .icons_and_playing {
@@ -421,27 +391,52 @@ header .ham-menu > div {
 .widget .icons_and_playing .icons img {
   width: 2.5rem;
 }
-.widget .icons_and_playing .icons .play-all {
+.widget .icons_and_playing .icons .playBtn {
+  height: 4.5rem;
   width: 4.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: rgb(250, 205, 102);
+}
+.widget .icons_and_playing .icons .playBtn i {
+  font-size: 18px;
+  color: rgb(26, 30, 31);
+}
+.widget .icons_and_playing .playing-container {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.widget .icons_and_playing .playing-container .progress {
+  background-color: rgb(250, 205, 102);
+  height: 100%;
+  width: 50%;
+  border-radius: 5px;
 }
 .widget .volume {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  width: 20%;
+  display: flex;
+  justify-content: end;
 }
 @media (max-width: 420px) {
   .widget .volume {
     display: none;
   }
 }
-.widget .volume-line {
-  position: absolute;
-  content: "";
-  width: 8rem;
-  height: 2px;
-  background-color: rgb(250, 205, 102);
-  right: 9%;
+.widget input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 4px;
+  border-radius: 5px;
+  accent-color: rgb(250, 205, 102);
+  caret-color: red;
 }
 .widget .hidden {
   display: none;
@@ -466,7 +461,8 @@ header .ham-menu > div {
   padding: 5rem;
   padding-top: 10rem;
   z-index: 100000;
-  display: none;
+  transform: translateX(-120%);
+  transition: transform 500ms ease-in-out;
 }
 .menu .home {
   margin-left: -1rem;
@@ -503,5 +499,5 @@ header .ham-menu > div {
 }
 
 .active.menu {
-  display: flex;
+  transform: translateX(0);
 }/*# sourceMappingURL=album.css.map */

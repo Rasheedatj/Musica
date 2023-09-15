@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 2em;
+  width: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,7 +27,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(120, 169, 183);
-  border-radius: 5rem;
 }
 
 header {
@@ -39,31 +38,39 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgb(29, 33, 35);
-  z-index: 10000;
+  z-index: 100;
 }
 @media (max-width: 420px) {
   header {
-    gap: 1.5rem;
-    padding: 3rem;
+    justify-content: space-between;
+    padding-inline: 2rem;
   }
 }
-header .image {
-  width: 8%;
+header .logo {
+  width: 10%;
+}
+@media (max-width: 420px) {
+  header .logo {
+    width: 10%;
+  }
+}
+@media (max-width: 420px) {
+  header .logo img {
+    width: 90%;
+  }
 }
 header .search {
   width: 90%;
   background-color: rgb(26, 30, 31);
   padding: 1.5rem 2rem;
   border-radius: 20px;
-  margin-left: 2rem;
 }
 @media (max-width: 420px) {
   header .search {
     padding: 1rem 2rem;
     display: flex;
-    gap: 3rem;
-    flex-direction: row-reverse;
+    gap: 1rem;
+    width: 70%;
   }
 }
 header .search input {
@@ -73,26 +80,15 @@ header .search input {
   margin-left: 3rem;
   background-color: transparent;
   width: 80%;
-  color: rgb(255, 255, 255);
+  color: rgb(29, 33, 35);
 }
 @media (max-width: 420px) {
   header .search input {
     margin-left: 0;
   }
 }
-@media (max-width: 420px) {
-  header .search ::-moz-placeholder {
-    color: rgb(29, 33, 35);
-  }
-  header .search :-ms-input-placeholder {
-    color: rgb(29, 33, 35);
-  }
-  header .search ::placeholder {
-    color: rgb(29, 33, 35);
-  }
-}
 header .search i {
-  font-size: 24px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
 }
 header .ham-menu {
@@ -103,15 +99,26 @@ header .ham-menu {
     display: block;
   }
 }
-header .ham-menu > div {
-  width: 3rem;
-  height: 0.4rem;
-  background-color: rgb(255, 255, 255);
-  color: white;
+header .ham-menu i {
+  font-size: 3rem;
+  color: rgb(120, 169, 183);
   margin-block: 1rem;
 }
 
-.side-menu {
+main {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  padding-inline: 5.5rem;
+}
+@media (max-width: 420px) {
+  main {
+    padding: 15rem 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+main aside {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,26 +126,25 @@ header .ham-menu > div {
   gap: 6rem;
   justify-content: start;
   align-items: flex-start;
+  width: 10%;
   position: fixed;
-  left: 3%;
-  top: 20%;
 }
 @media (max-width: 420px) {
-  .side-menu {
+  main aside {
     display: none;
   }
 }
-.side-menu .part-1 {
+main aside .part-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3.3rem;
+  gap: 3rem;
   background-color: rgb(26, 30, 31);
-  padding: 2rem 1.6rem;
+  padding: 1rem 0.8rem;
   border-radius: 25px;
 }
-.side-menu .part-2 {
+main aside .part-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,23 +155,30 @@ header .ham-menu > div {
   padding: 2rem 1.5rem;
   border-radius: 25px;
 }
-
-.btns {
+main .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-left: 10%;
+}
+@media (max-width: 420px) {
+  main .container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+main .container .btns {
   display: flex;
   flex-direction: row;
-  padding-left: 19.5rem;
-  padding-top: 13rem;
-  padding-right: 10rem;
-  padding-bottom: 5rem;
   gap: 5rem;
 }
 @media (max-width: 420px) {
-  .btns {
-    padding-inline: 3rem;
+  main .container .btns {
     gap: 4rem;
   }
 }
-.btns button {
+main .container .btns button {
   border: none;
   outline: none;
   font-size: 2rem;
@@ -174,45 +187,39 @@ header .ham-menu > div {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.btns .btn-1 {
+main .container .btns .btn-1 {
   background-color: rgb(250, 205, 102);
   padding: 1.5rem 2rem;
   border-radius: 25px;
   border: 1px solid rgb(250, 205, 102);
 }
-.btns .btn-1:hover {
+main .container .btns .btn-1:hover {
   background-color: transparent;
   border: 1px solid rgb(239, 238, 224);
   color: rgba(255, 255, 255, 0.5);
 }
-.btns .btn-2 {
+main .container .btns .btn-2 {
   background-color: transparent;
   border: 1px solid rgb(239, 238, 224);
   color: rgba(255, 255, 255, 0.5);
   padding: 0rem 3.5rem;
   border-radius: 27px;
 }
-.btns .btn-2:hover {
+main .container .btns .btn-2:hover {
   background-color: rgb(250, 205, 102);
   color: black;
 }
-
-.collection {
-  padding-left: 19.5rem;
-  padding-top: 3rem;
-  padding-right: 10rem;
-  padding-bottom: 5rem;
+main .container .collection {
   display: flex;
   flex-direction: row;
   gap: 5rem;
 }
 @media (max-width: 420px) {
-  .collection {
-    padding-inline: 3rem;
+  main .container .collection {
     flex-direction: column;
   }
 }
-.collection .box {
+main .container .collection .box {
   padding: 2rem 1.5rem;
   width: 20rem;
   height: 20rem;
@@ -222,134 +229,99 @@ header .ham-menu > div {
   position: relative;
 }
 @media (max-width: 420px) {
-  .collection .box {
+  main .container .collection .box {
     width: 100%;
   }
 }
-.collection .box .visible {
+main .container .collection .box .visible {
   position: absolute;
   bottom: 2rem;
   z-index: 100;
   transition: transform 500ms ease;
 }
 @media (max-width: 420px) {
-  .collection .box .visible {
+  main .container .collection .box .visible {
     transform: translateY(-2.5rem);
     margin-bottom: 2rem;
   }
 }
-.collection .box .visible h4 {
+main .container .collection .box .visible h4 {
   color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 2rem;
   text-transform: capitalize;
 }
-.collection .box .visible p, .collection .box .visible .menu > div a, .menu > div .collection .box .visible a {
+main .container .collection .box .visible p, main .container .collection .box .visible .menu > div a, .menu > div main .container .collection .box .visible a {
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.5rem;
   padding-block: 0.5rem;
   font-weight: 500;
 }
-.collection .box .hidden {
+main .container .collection .box .hidden {
   position: absolute;
   bottom: 0;
   transition: transform 500ms ease;
-  transition-delay: 0.05s;
+  transition-delay: 70ms;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(100%);
 }
 @media (max-width: 420px) {
-  .collection .box .hidden {
+  main .container .collection .box .hidden {
     bottom: 0.5rem;
     transform: translateY(-4rem);
   }
 }
-.collection .box .hidden p, .collection .box .hidden .menu > div a, .menu > div .collection .box .hidden a {
+main .container .collection .box .hidden p, main .container .collection .box .hidden .menu > div a, .menu > div main .container .collection .box .hidden a {
   text-transform: capitalize;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   padding-block: 0.5rem;
   font-weight: 500;
-  transform: translateY(100%);
 }
-.collection .box::before {
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f04b";
-  color: yellow;
-  font-size: 25px;
-  height: 5rem;
-  width: 5rem;
+main .container .collection .box .hidden div {
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   background-color: rgba(250, 205, 102, 0.5);
-  display: none;
+  display: grid;
   place-items: center;
-  right: 5%;
-  bottom: 10%;
-  z-index: 100;
-  transition: all 200ms ease;
-  -webkit-animation: slideUp 500ms ease;
-          animation: slideUp 500ms ease;
+  color: rgb(250, 205, 102);
+  font-size: 22px;
 }
-@media (max-width: 420px) {
-  .collection .box::before {
-    display: grid;
-  }
-}
-.collection .box:hover {
+main .container .collection .box:hover {
   transform: scale(1.05);
 }
 @media (max-width: 420px) {
-  .collection .box:hover {
+  main .container .collection .box:hover {
     transform: scale(1);
   }
 }
-.collection .one {
+main .container .collection .one {
   background: url(../../dist/img/limit-1.png) center center/cover;
   border-radius: 25px;
 }
-.collection .two {
+main .container .collection .two {
   background: url(../../dist/img/limit-2.png) center center/cover;
   border-radius: 25px;
 }
-.collection .three {
+main .container .collection .three {
   background: url(../../dist/img/limit-3.png) center center/cover;
   border-radius: 25px;
 }
-.collection .four {
+main .container .collection .four {
   background: url(../../dist/img/limit-4.png) center center/cover;
   border-radius: 25px;
 }
-
-.box:hover .visible {
-  transform: translateY(-2.5rem);
+main .container .box:hover .visible {
+  transform: translateY(-3.5rem);
+}
+main .container .box:hover .hidden {
+  transform: translateY(-15%);
 }
 
-.box:hover .hidden {
-  transform: translateY(-4rem);
-}
-
-.box:hover.box::before {
-  display: grid;
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    transform: translateY(30%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(30%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .menu {
   position: fixed;
   background-color: rgb(29, 33, 35);
@@ -360,7 +332,8 @@ header .ham-menu > div {
   padding: 5rem;
   padding-top: 10rem;
   z-index: 100000;
-  display: none;
+  transform: translateX(-120%);
+  transition: transform 500ms ease-in-out;
 }
 .menu .home {
   margin-left: -1rem;
@@ -397,5 +370,5 @@ header .ham-menu > div {
 }
 
 .active.menu {
-  display: flex;
+  transform: translateX(0);
 }/*# sourceMappingURL=collection.css.map */
