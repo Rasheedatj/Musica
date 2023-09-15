@@ -53,16 +53,16 @@ function play(e) {
 
 function init() {
   switch (global.currentPage) {
-    case '/':
-    case '/index.html':
+    case '/Musica/':
+    case '/Musica/index.html':
       document.querySelector('.top-charts').addEventListener('click', like);
       initSwiper();
       document.addEventListener('click', play);
       break;
-    case '/dist/album.html':
+    case '/Musica/dist/album.html':
       console.log('album');
       break;
-    case '/dist/collection.html':
+    case '/Musica/dist/collection.html':
       console.log('collection');
       document.addEventListener('click', play);
 
